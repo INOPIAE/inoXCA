@@ -26,7 +26,7 @@ Public Class FrmXCABundle
 
     Private Sub CallRecursive(ByVal treeView As TreeView, FilePath As String)
         Dim PEMfile As System.IO.StreamWriter
-        PEMfile = My.Computer.FileSystem.OpenTextFileWriter(Me.TxtPEM.Text, True)
+        PEMfile = My.Computer.FileSystem.OpenTextFileWriter(Me.TxtPEM.Text, False)
 
         Dim nodes As TreeNodeCollection = treeView.Nodes
 
@@ -40,6 +40,7 @@ Public Class FrmXCABundle
         Dim ofd As New OpenFileDialog
         With ofd
             .Filter = "XCA-File | *.xdb"
+            .Multiselect = False
             If .ShowDialog = DialogResult.OK Then
                 Me.TxtFileXCA.Text = .FileName
                 Dim cDB As New ClsDB
@@ -65,5 +66,12 @@ Public Class FrmXCABundle
         Me.LblXCA.Text = clsLang.rm.getString("PemXCA")
         Me.LblPEM.Text = clsLang.rm.getString("PemPem")
         Me.CmdClose.Text = clsLang.rm.getString("CmdClose")
+
+        TxtInfo.Text = clsLang.rm.getString("PemInfo1") & vbNewLine & clsLang.rm.getString("PemInfo2")
+        CmdFilePEM.Enabled = False
+    End Sub
+
+    Private Sub TxtFileXCA_TextChanged(sender As Object, e As EventArgs) Handles TxtFileXCA.TextChanged
+        CmdFilePEM.Enabled = File.Exists(Me.TxtFileXCA.Text)
     End Sub
 End Class

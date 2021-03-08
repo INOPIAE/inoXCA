@@ -335,6 +335,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die 1. Select xca file to see content. ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property PemInfo1() As String
+            Get
+                Return ResourceManager.GetString("PemInfo1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die 2. Select pem file to export certificates to bundle. ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property PemInfo2() As String
+            Get
+                Return ResourceManager.GetString("PemInfo2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die PEM file: ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property PemPem() As String

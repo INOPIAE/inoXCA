@@ -225,4 +225,10 @@
   <data name="CmdOK" xml:space="preserve">
     <value>OK</value>
   </data>
+  <data name="PemInfo1" xml:space="preserve">
+    <value>1. Wähle XCA Datei, um den Inhalt zu sehen.</value>
+  </data>
+  <data name="PemInfo2" xml:space="preserve">
+    <value>2. Wähle PEM Datei, um die Zertifikate in Bundle-Datei zu exportieren. </value>
+  </data>
 </root>

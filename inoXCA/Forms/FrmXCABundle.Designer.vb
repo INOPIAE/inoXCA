@@ -30,6 +30,7 @@ Partial Class FrmXCABundle
         Me.LblPEM = New System.Windows.Forms.Label()
         Me.TxtPEM = New System.Windows.Forms.TextBox()
         Me.CmdFilePEM = New System.Windows.Forms.Button()
+        Me.TxtInfo = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'CmdClose
@@ -37,7 +38,7 @@ Partial Class FrmXCABundle
         Me.CmdClose.Location = New System.Drawing.Point(466, 335)
         Me.CmdClose.Name = "CmdClose"
         Me.CmdClose.Size = New System.Drawing.Size(85, 27)
-        Me.CmdClose.TabIndex = 0
+        Me.CmdClose.TabIndex = 8
         Me.CmdClose.Text = "Close"
         Me.CmdClose.UseVisualStyleBackColor = True
         '
@@ -47,7 +48,7 @@ Partial Class FrmXCABundle
         Me.LblXCA.Location = New System.Drawing.Point(17, 17)
         Me.LblXCA.Name = "LblXCA"
         Me.LblXCA.Size = New System.Drawing.Size(44, 13)
-        Me.LblXCA.TabIndex = 1
+        Me.LblXCA.TabIndex = 0
         Me.LblXCA.Text = "XCA file"
         '
         'TxtFileXCA
@@ -55,14 +56,14 @@ Partial Class FrmXCABundle
         Me.TxtFileXCA.Location = New System.Drawing.Point(112, 13)
         Me.TxtFileXCA.Name = "TxtFileXCA"
         Me.TxtFileXCA.Size = New System.Drawing.Size(315, 20)
-        Me.TxtFileXCA.TabIndex = 2
+        Me.TxtFileXCA.TabIndex = 1
         '
         'CmdFileXCA
         '
-        Me.CmdFileXCA.Location = New System.Drawing.Point(466, 14)
+        Me.CmdFileXCA.Location = New System.Drawing.Point(433, 14)
         Me.CmdFileXCA.Name = "CmdFileXCA"
         Me.CmdFileXCA.Size = New System.Drawing.Size(35, 19)
-        Me.CmdFileXCA.TabIndex = 3
+        Me.CmdFileXCA.TabIndex = 2
         Me.CmdFileXCA.Text = "..."
         Me.CmdFileXCA.UseVisualStyleBackColor = True
         '
@@ -72,7 +73,7 @@ Partial Class FrmXCABundle
         Me.TvCerts.Location = New System.Drawing.Point(112, 71)
         Me.TvCerts.Name = "TvCerts"
         Me.TvCerts.Size = New System.Drawing.Size(315, 291)
-        Me.TvCerts.TabIndex = 4
+        Me.TvCerts.TabIndex = 6
         '
         'LblPEM
         '
@@ -80,7 +81,7 @@ Partial Class FrmXCABundle
         Me.LblPEM.Location = New System.Drawing.Point(17, 49)
         Me.LblPEM.Name = "LblPEM"
         Me.LblPEM.Size = New System.Drawing.Size(46, 13)
-        Me.LblPEM.TabIndex = 1
+        Me.LblPEM.TabIndex = 3
         Me.LblPEM.Text = "PEM file"
         '
         'TxtPEM
@@ -88,22 +89,32 @@ Partial Class FrmXCABundle
         Me.TxtPEM.Location = New System.Drawing.Point(112, 45)
         Me.TxtPEM.Name = "TxtPEM"
         Me.TxtPEM.Size = New System.Drawing.Size(315, 20)
-        Me.TxtPEM.TabIndex = 2
+        Me.TxtPEM.TabIndex = 4
         '
         'CmdFilePEM
         '
-        Me.CmdFilePEM.Location = New System.Drawing.Point(466, 46)
+        Me.CmdFilePEM.Location = New System.Drawing.Point(433, 46)
         Me.CmdFilePEM.Name = "CmdFilePEM"
         Me.CmdFilePEM.Size = New System.Drawing.Size(35, 19)
-        Me.CmdFilePEM.TabIndex = 3
+        Me.CmdFilePEM.TabIndex = 5
         Me.CmdFilePEM.Text = "..."
         Me.CmdFilePEM.UseVisualStyleBackColor = True
+        '
+        'TxtInfo
+        '
+        Me.TxtInfo.Enabled = False
+        Me.TxtInfo.Location = New System.Drawing.Point(433, 71)
+        Me.TxtInfo.Multiline = True
+        Me.TxtInfo.Name = "TxtInfo"
+        Me.TxtInfo.Size = New System.Drawing.Size(166, 176)
+        Me.TxtInfo.TabIndex = 7
         '
         'FrmXCABundle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(576, 450)
+        Me.ClientSize = New System.Drawing.Size(640, 450)
+        Me.Controls.Add(Me.TxtInfo)
         Me.Controls.Add(Me.TvCerts)
         Me.Controls.Add(Me.CmdFilePEM)
         Me.Controls.Add(Me.CmdFileXCA)
@@ -127,4 +138,5 @@ Partial Class FrmXCABundle
     Friend WithEvents LblPEM As Label
     Friend WithEvents TxtPEM As TextBox
     Friend WithEvents CmdFilePEM As Button
+    Friend WithEvents TxtInfo As TextBox
 End Class

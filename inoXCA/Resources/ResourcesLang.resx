@@ -225,4 +225,10 @@
   <data name="CmdOK" xml:space="preserve">
     <value>OK</value>
   </data>
+  <data name="PemInfo1" xml:space="preserve">
+    <value>1. Select xca file to see content.</value>
+  </data>
+  <data name="PemInfo2" xml:space="preserve">
+    <value>2. Select pem file to export certificates to bundle.</value>
+  </data>
 </root>
