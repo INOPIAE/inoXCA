@@ -28,7 +28,7 @@ Public Class ClsDB
 
         While SQLreader.Read()
             tvCerts.Nodes.Add(New IdNode() With {
-                .Name = SQLreader("name"),
+                .Name = String.Format("{0}|{1}", SQLreader("name"), SQLreader("pkey")),
                 .Text = SQLreader("name"),
                 .Id = SQLreader("id"),
                 .ParentId = SQLreader("issuer"),
@@ -77,4 +77,6 @@ Public Class ClsDB
 
         Return result
     End Function
+
+
 End Class

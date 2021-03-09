@@ -134,6 +134,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ClsCerts.vb" />
     <Compile Include="Classes\ClsDB.vb" />
     <Compile Include="Classes\ClsLanguage.vb" />
     <Compile Include="Forms\FrmAbout.designer.vb">

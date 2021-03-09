@@ -1,27 +1,18 @@
 ﻿Imports System.IO
 
 Public Class FrmXCABundle
+    Private cCert As New ClsCerts
+
     Private Sub CmdOK_Click(sender As Object, e As EventArgs) Handles CmdClose.Click
         Me.Close()
     End Sub
 
     Private Sub PrintRecursive(ByVal treeNode As TreeNode, PEMfile As StreamWriter)
-
         For Each tn As TreeNode In treeNode.Nodes
             PrintRecursive(tn, PEMfile)
         Next
         PEMfile.WriteLine(treeNode.Text)
-        PEMfile.WriteLine("-----BEGIN CERTIFICATE-----")
-        Dim strings As New List(Of String)
-
-        For i As Integer = 0 To treeNode.Tag.Length - 1 Step 64
-            If Len(treeNode.Tag.Substring(i)) > 64 Then
-                PEMfile.WriteLine(treeNode.Tag.Substring(i, 64))
-            Else
-                PEMfile.WriteLine(treeNode.Tag.Substring(i))
-            End If
-        Next
-        PEMfile.WriteLine("-----END CERTIFICATE-----")
+        PEMfile.WriteLine(cCert.PEMString(treeNode.Tag, ClsCerts.CertType.Certificate))
     End Sub
 
     Private Sub CallRecursive(ByVal treeView As TreeView, FilePath As String)
@@ -33,6 +24,7 @@ Public Class FrmXCABundle
         For Each n As TreeNode In nodes
             PrintRecursive(n, PEMfile)
         Next
+
         PEMfile.Close()
     End Sub
 
