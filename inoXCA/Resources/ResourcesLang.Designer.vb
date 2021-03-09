@@ -128,11 +128,20 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Export ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Export selected ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property CmdExport() As String
             Get
                 Return ResourceManager.GetString("CmdExport", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Export checked ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property CmdExportBulk() As String
+            Get
+                Return ResourceManager.GetString("CmdExportBulk", resourceCulture)
             End Get
         End Property
         

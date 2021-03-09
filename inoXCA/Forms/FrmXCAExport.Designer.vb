@@ -39,6 +39,7 @@ Partial Class FrmXCAExport
         Me.TxtPWDB = New System.Windows.Forms.TextBox()
         Me.LblPWFile = New System.Windows.Forms.Label()
         Me.TxtPWFile = New System.Windows.Forms.TextBox()
+        Me.CmdBulkExport = New System.Windows.Forms.Button()
         Me.gpType.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -104,16 +105,16 @@ Partial Class FrmXCAExport
         '
         Me.CmdClose.Location = New System.Drawing.Point(493, 376)
         Me.CmdClose.Name = "CmdClose"
-        Me.CmdClose.Size = New System.Drawing.Size(85, 27)
+        Me.CmdClose.Size = New System.Drawing.Size(85, 41)
         Me.CmdClose.TabIndex = 13
         Me.CmdClose.Text = "Close"
         Me.CmdClose.UseVisualStyleBackColor = True
         '
         'CmdExport
         '
-        Me.CmdExport.Location = New System.Drawing.Point(493, 343)
+        Me.CmdExport.Location = New System.Drawing.Point(493, 332)
         Me.CmdExport.Name = "CmdExport"
-        Me.CmdExport.Size = New System.Drawing.Size(85, 27)
+        Me.CmdExport.Size = New System.Drawing.Size(85, 41)
         Me.CmdExport.TabIndex = 12
         Me.CmdExport.Text = "Export"
         Me.CmdExport.UseVisualStyleBackColor = True
@@ -196,6 +197,15 @@ Partial Class FrmXCAExport
         Me.TxtPWFile.Size = New System.Drawing.Size(315, 20)
         Me.TxtPWFile.TabIndex = 9
         '
+        'CmdBulkExport
+        '
+        Me.CmdBulkExport.Location = New System.Drawing.Point(493, 288)
+        Me.CmdBulkExport.Name = "CmdBulkExport"
+        Me.CmdBulkExport.Size = New System.Drawing.Size(85, 41)
+        Me.CmdBulkExport.TabIndex = 12
+        Me.CmdBulkExport.Text = "Bulk"
+        Me.CmdBulkExport.UseVisualStyleBackColor = True
+        '
         'FrmXCAExport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -213,6 +223,7 @@ Partial Class FrmXCAExport
         Me.Controls.Add(Me.LblPWDB)
         Me.Controls.Add(Me.TxtFileXCA)
         Me.Controls.Add(Me.LblXCA)
+        Me.Controls.Add(Me.CmdBulkExport)
         Me.Controls.Add(Me.CmdExport)
         Me.Controls.Add(Me.CmdClose)
         Me.Name = "FrmXCAExport"
@@ -241,4 +252,5 @@ Partial Class FrmXCAExport
     Friend WithEvents LblPWFile As Label
     Friend WithEvents TxtPWFile As TextBox
     Friend WithEvents RbP12Chain As RadioButton
+    Friend WithEvents CmdBulkExport As Button
 End Class

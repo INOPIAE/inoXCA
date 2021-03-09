@@ -232,7 +232,7 @@
     <value>2. Wähle PEM Datei, um die Zertifikate in Bundle-Datei zu exportieren.</value>
   </data>
   <data name="CmdExport" xml:space="preserve">
-    <value>Export</value>
+    <value>Exportiere ausgewähltes</value>
   </data>
   <data name="ExportXCATitle" xml:space="preserve">
     <value>Exportieren von XCA in eine Zertifikatsdatei</value>
@@ -284,5 +284,8 @@
   </data>
   <data name="MsgMissingCertFolder" xml:space="preserve">
     <value>Es muss noch ein Ordner zum Speichern von Zertifikaten angegeben werden.</value>
+  </data>
+  <data name="CmdExportBulk" xml:space="preserve">
+    <value>Exportiere angeklickte</value>
   </data>
 </root>

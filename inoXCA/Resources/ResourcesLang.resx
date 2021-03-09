@@ -232,7 +232,7 @@
     <value>2. Select pem file to export certificates to bundle.</value>
   </data>
   <data name="CmdExport" xml:space="preserve">
-    <value>Export</value>
+    <value>Export selected</value>
   </data>
   <data name="ExportXCATitle" xml:space="preserve">
     <value>Export from XCA to certificate file</value>
@@ -284,5 +284,8 @@
   </data>
   <data name="MsgMissingCertFolder" xml:space="preserve">
     <value>You need to set a folder to store certificates.</value>
+  </data>
+  <data name="CmdExportBulk" xml:space="preserve">
+    <value>Export checked</value>
   </data>
 </root>
