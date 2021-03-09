@@ -30,8 +30,8 @@
     <InstallUrl>https://raw.githubusercontent.com/INOPIAE/inoXCA/master/inoXCA/publish/</InstallUrl>
     <ProductName>inoXCA</ProductName>
     <PublisherName>INOPIAE GbR</PublisherName>
-    <ApplicationRevision>1</ApplicationRevision>
-    <ApplicationVersion>0.0.0.1</ApplicationVersion>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>0.0.0.2</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
