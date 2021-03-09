@@ -229,6 +229,60 @@
     <value>1. Wähle XCA Datei, um den Inhalt zu sehen.</value>
   </data>
   <data name="PemInfo2" xml:space="preserve">
-    <value>2. Wähle PEM Datei, um die Zertifikate in Bundle-Datei zu exportieren. </value>
+    <value>2. Wähle PEM Datei, um die Zertifikate in Bundle-Datei zu exportieren.</value>
+  </data>
+  <data name="CmdExport" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="ExportXCATitle" xml:space="preserve">
+    <value>Exportieren von XCA in eine Zertifikatsdatei</value>
+  </data>
+  <data name="ExportXCADBPW" xml:space="preserve">
+    <value>XCA Passwort:</value>
+  </data>
+  <data name="ExportXCAPEMFile" xml:space="preserve">
+    <value>Zertifikatsdatei:</value>
+  </data>
+  <data name="ExportXCAPEMPW" xml:space="preserve">
+    <value>Passwort für Zertifikatsdatei:</value>
+  </data>
+  <data name="ExportXCAFileType" xml:space="preserve">
+    <value>Dateityp</value>
+  </data>
+  <data name="ExportXCAPriv" xml:space="preserve">
+    <value>Privater PEM Schlüssel</value>
+  </data>
+  <data name="ExportXCAP12" xml:space="preserve">
+    <value>P12 Datei</value>
+  </data>
+  <data name="ExportXCAP12Chain" xml:space="preserve">
+    <value>P12 Datei mit Zertifikatskette</value>
+  </data>
+  <data name="MsgNoXCA" xml:space="preserve">
+    <value>Keine XCA-Datei angegeben.</value>
+  </data>
+  <data name="MsgNoXCAPW" xml:space="preserve">
+    <value>Kein Password für die XCA Datei angegeben.</value>
+  </data>
+  <data name="MsgNoPEM" xml:space="preserve">
+    <value>Keine Zertifikatsdatei angegeben.</value>
+  </data>
+  <data name="MsgNoPEMPW" xml:space="preserve">
+    <value>Kein Passwort für die Zertifikatsdatei angegeben.</value>
+  </data>
+  <data name="MsgNoPrivKey" xml:space="preserve">
+    <value>Kein privater Schlüssel vorhanden.</value>
+  </data>
+  <data name="MsgNoSelection" xml:space="preserve">
+    <value>Kein Zertifikat ausgewählt.</value>
+  </data>
+  <data name="MsgCertLoadError" xml:space="preserve">
+    <value>Fehler beim Laden des Zertifikats. Eventuell stimmt das XCA-Passwort nicht.</value>
+  </data>
+  <data name="AboutCrypto" xml:space="preserve">
+    <value>Zum Erstellen der privaten Schlüssel wird die folgende Kryptoengine genutzt:</value>
+  </data>
+  <data name="MsgMissingCertFolder" xml:space="preserve">
+    <value>Es muss noch ein Ordner zum Speichern von Zertifikaten angegeben werden.</value>
   </data>
 </root>

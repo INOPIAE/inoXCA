@@ -17,6 +17,7 @@ Public Class FrmSettings
             Thread.CurrentThread.CurrentCulture = New Globalization.CultureInfo(My.Settings.Language)
             Thread.CurrentThread.CurrentUICulture = New Globalization.CultureInfo(My.Settings.Language)
         End If
+        My.Settings.CertFolder = Me.TxtFolder.Text
         My.Settings.Save()
         If blnLanguage = True Then
             Application.Restart()
@@ -28,7 +29,7 @@ Public Class FrmSettings
     End Sub
 
     Private Sub FrmSettings_Load(sender As Object, e As EventArgs) Handles Me.Load
-
+        Me.TxtFolder.Text = My.Settings.CertFolder
         Me.Text = clsLang.rm.getString("SettingsTitle")
         Me.LblLanguage.Text = clsLang.rm.getString("SettingsLanguage")
         Me.CmdCancel.Text = clsLang.rm.getString("CmdCancel")
@@ -54,5 +55,14 @@ Public Class FrmSettings
 
     Private Sub CmdSave_Click(sender As Object, e As EventArgs) Handles CmdSave.Click
         SaveSettings()
+    End Sub
+
+    Private Sub CmdFolder_Click(sender As Object, e As EventArgs) Handles CmdFolder.Click
+        Dim fbd As New FolderBrowserDialog
+        With fbd
+            If .ShowDialog = DialogResult.OK Then
+                Me.TxtFolder.Text = .SelectedPath
+            End If
+        End With
     End Sub
 End Class

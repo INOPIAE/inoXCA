@@ -78,5 +78,24 @@ Public Class ClsDB
         Return result
     End Function
 
+    Public Function GetPrivateKey(DBPath As String, id As Long) As String
+        Dim connect As New Sqlite.SqliteConnection()
+        Dim command As New SqliteCommand
+        connect.ConnectionString = "Data Source='" & DBPath & "'"
+        connect.Open()
 
+        command = connect.CreateCommand
+
+        command.CommandText = "SELECT * FROM private_keys WHERE item = " & id
+
+        Dim SQLreader As SqliteDataReader = command.ExecuteReader()
+        Dim key As String = vbNullString
+        While SQLreader.Read()
+            key = SQLreader("private")
+            Exit While
+        End While
+        command.Dispose()
+        connect.Close()
+        Return key
+    End Function
 End Class

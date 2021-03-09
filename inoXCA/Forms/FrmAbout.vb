@@ -33,7 +33,9 @@ Public NotInheritable Class FrmAbout
     End Sub
 
     Private Function BuildDescription() As String
+        Dim cOpen As New ClsOpenSSL
         Dim description As String = clsLang.rm.GetString("ApplicationDescription")
+        description &= vbNewLine & vbNewLine & clsLang.rm.GetString("AboutCrypto") & vbNewLine & cOpen.OpenSSLVersion
         Return description
     End Function
 End Class

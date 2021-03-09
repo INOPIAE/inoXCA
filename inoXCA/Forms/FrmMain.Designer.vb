@@ -79,6 +79,7 @@ Partial Class FrmMain
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ExportPEMToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -261,7 +262,7 @@ Partial Class FrmMain
         '
         'XCAToolStripMenuItem
         '
-        Me.XCAToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreatePEMBundleToolStripMenuItem})
+        Me.XCAToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreatePEMBundleToolStripMenuItem, Me.ExportPEMToolStripMenuItem})
         Me.XCAToolStripMenuItem.Name = "XCAToolStripMenuItem"
         Me.XCAToolStripMenuItem.Size = New System.Drawing.Size(42, 20)
         Me.XCAToolStripMenuItem.Text = "&XCA"
@@ -269,7 +270,7 @@ Partial Class FrmMain
         'CreatePEMBundleToolStripMenuItem
         '
         Me.CreatePEMBundleToolStripMenuItem.Name = "CreatePEMBundleToolStripMenuItem"
-        Me.CreatePEMBundleToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.CreatePEMBundleToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CreatePEMBundleToolStripMenuItem.Text = "Create PEM Bundle"
         '
         'ViewMenu
@@ -308,7 +309,7 @@ Partial Class FrmMain
         'OptionsToolStripMenuItem
         '
         Me.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
-        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
         Me.OptionsToolStripMenuItem.Text = "&Optionen"
         '
         'WindowsMenu
@@ -365,7 +366,7 @@ Partial Class FrmMain
         '
         Me.ContentsToolStripMenuItem.Name = "ContentsToolStripMenuItem"
         Me.ContentsToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F1), System.Windows.Forms.Keys)
-        Me.ContentsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ContentsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ContentsToolStripMenuItem.Text = "&Inhalt"
         Me.ContentsToolStripMenuItem.Visible = False
         '
@@ -374,7 +375,7 @@ Partial Class FrmMain
         Me.IndexToolStripMenuItem.Image = CType(resources.GetObject("IndexToolStripMenuItem.Image"), System.Drawing.Image)
         Me.IndexToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.IndexToolStripMenuItem.Name = "IndexToolStripMenuItem"
-        Me.IndexToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.IndexToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.IndexToolStripMenuItem.Text = "&Index"
         Me.IndexToolStripMenuItem.Visible = False
         '
@@ -383,20 +384,20 @@ Partial Class FrmMain
         Me.SearchToolStripMenuItem.Image = CType(resources.GetObject("SearchToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SearchToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.SearchToolStripMenuItem.Name = "SearchToolStripMenuItem"
-        Me.SearchToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SearchToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SearchToolStripMenuItem.Text = "&Suchen"
         Me.SearchToolStripMenuItem.Visible = False
         '
         'ToolStripSeparator8
         '
         Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(149, 6)
         Me.ToolStripSeparator8.Visible = False
         '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AboutToolStripMenuItem.Text = "&Info..."
         '
         'ToolStrip
@@ -488,6 +489,12 @@ Partial Class FrmMain
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(39, 17)
         Me.ToolStripStatusLabel.Text = "Status"
         '
+        'ExportPEMToolStripMenuItem
+        '
+        Me.ExportPEMToolStripMenuItem.Name = "ExportPEMToolStripMenuItem"
+        Me.ExportPEMToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExportPEMToolStripMenuItem.Text = "Export PEM"
+        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -564,4 +571,5 @@ Partial Class FrmMain
     Friend WithEvents ToolsMenu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents XCAToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CreatePEMBundleToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExportPEMToolStripMenuItem As ToolStripMenuItem
 End Class

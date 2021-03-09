@@ -119,6 +119,7 @@ Public Class FrmMain
         Me.ToolStripStatusLabel.Text = clsLang.rm.getString("MainStatus")
         Me.XCAToolStripMenuItem.Text = clsLang.rm.getString("MainXCA")
         Me.CreatePEMBundleToolStripMenuItem.Text = clsLang.rm.getString("MainXCABundle")
+        Me.ExportPEMToolStripMenuItem.Text = clsLang.rm.getString("ExportXCATitle")
     End Sub
 
     Private Sub OptionsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OptionsToolStripMenuItem.Click
@@ -132,5 +133,14 @@ Public Class FrmMain
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
         FrmAbout.Show()
+    End Sub
+
+    Private Sub ExportPEMToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExportPEMToolStripMenuItem.Click
+        Dim frm As New FrmXCAExport
+        With frm
+            .MdiParent = Me
+            .Show()
+            .WindowState = FormWindowState.Maximized
+        End With
     End Sub
 End Class

@@ -65,6 +65,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die To generate the private key the following crypto engine is used: ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property AboutCrypto() As String
+            Get
+                Return ResourceManager.GetString("AboutCrypto", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Info {0} ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property AboutInfo() As String
@@ -119,6 +128,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Export ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property CmdExport() As String
+            Get
+                Return ResourceManager.GetString("CmdExport", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die License ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property CmdLicense() As String
@@ -151,6 +169,78 @@ Namespace My.Resources
         Friend Shared ReadOnly Property CmdSaveClose() As String
             Get
                 Return ResourceManager.GetString("CmdSaveClose", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die XCA Pwassword: ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property ExportXCADBPW() As String
+            Get
+                Return ResourceManager.GetString("ExportXCADBPW", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die File type ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property ExportXCAFileType() As String
+            Get
+                Return ResourceManager.GetString("ExportXCAFileType", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die P12 file ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property ExportXCAP12() As String
+            Get
+                Return ResourceManager.GetString("ExportXCAP12", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die P12 file with root chain ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property ExportXCAP12Chain() As String
+            Get
+                Return ResourceManager.GetString("ExportXCAP12Chain", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Cerificate file: ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property ExportXCAPEMFile() As String
+            Get
+                Return ResourceManager.GetString("ExportXCAPEMFile", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Certificate password: ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property ExportXCAPEMPW() As String
+            Get
+                Return ResourceManager.GetString("ExportXCAPEMPW", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Private PEM key ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property ExportXCAPriv() As String
+            Get
+                Return ResourceManager.GetString("ExportXCAPriv", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Export from XCA to certificate file ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property ExportXCATitle() As String
+            Get
+                Return ResourceManager.GetString("ExportXCATitle", resourceCulture)
             End Get
         End Property
         
@@ -326,11 +416,83 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Error loading certificate. The XCA password might be incorret. ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property MsgCertLoadError() As String
+            Get
+                Return ResourceManager.GetString("MsgCertLoadError", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Hint ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property MsgHint() As String
             Get
                 Return ResourceManager.GetString("MsgHint", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die You need to set a folder to store certificates. ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property MsgMissingCertFolder() As String
+            Get
+                Return ResourceManager.GetString("MsgMissingCertFolder", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die No certificate file given. ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property MsgNoPEM() As String
+            Get
+                Return ResourceManager.GetString("MsgNoPEM", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die No password for certificate file given. ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property MsgNoPEMPW() As String
+            Get
+                Return ResourceManager.GetString("MsgNoPEMPW", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die No private key available. ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property MsgNoPrivKey() As String
+            Get
+                Return ResourceManager.GetString("MsgNoPrivKey", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die No certificate selected. ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property MsgNoSelection() As String
+            Get
+                Return ResourceManager.GetString("MsgNoSelection", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die No XCA file given. ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property MsgNoXCA() As String
+            Get
+                Return ResourceManager.GetString("MsgNoXCA", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die No password for XCA file given. ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property MsgNoXCAPW() As String
+            Get
+                Return ResourceManager.GetString("MsgNoXCAPW", resourceCulture)
             End Get
         End Property
         

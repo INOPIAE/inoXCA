@@ -137,6 +137,7 @@
     <Compile Include="Classes\ClsCerts.vb" />
     <Compile Include="Classes\ClsDB.vb" />
     <Compile Include="Classes\ClsLanguage.vb" />
+    <Compile Include="Classes\ClsOpenSSL.vb" />
     <Compile Include="Forms\FrmAbout.designer.vb">
       <DependentUpon>FrmAbout.vb</DependentUpon>
     </Compile>
@@ -166,6 +167,12 @@
     </Compile>
     <Compile Include="Forms\FrmXCABundle.Designer.vb">
       <DependentUpon>FrmXCABundle.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmXCAExport.Designer.vb">
+      <DependentUpon>FrmXCAExport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmXCAExport.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modules\MdlHelper.vb" />
@@ -211,6 +218,9 @@
     <EmbeddedResource Include="Forms\FrmXCABundle.resx">
       <DependentUpon>FrmXCABundle.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmXCAExport.resx">
+      <DependentUpon>FrmXCAExport.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -229,6 +239,18 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="lib\openssl\CA.pl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="lib\openssl\openssl.cfg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="lib\openssl\progs.pl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="lib\openssl\tsget.pl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="LICENSE">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -256,6 +278,32 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\openssl\capi.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\openssl\dasync.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\openssl\libcrypto-1_1.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\openssl\libssl-1_1.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\openssl\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\openssl\openssl.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\openssl\ossltest.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\openssl\padlock.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.2.0.4\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.2.0.4\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets')" />
