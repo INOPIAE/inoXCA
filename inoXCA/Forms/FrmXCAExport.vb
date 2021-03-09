@@ -58,7 +58,7 @@ Public Class FrmXCAExport
         End If
 
         If TvCerts.SelectedNode IsNot Nothing Then
-            SaveCert(TvCerts.SelectedNode, Me.TxtPWFile.Text)
+            SaveCert(TvCerts.SelectedNode, Me.TxtPEM.Text)
         Else
             MessageBox.Show(clsLang.rm.getString("MsgNoSelection"), clsLang.rm.getString("MsgHint"))
         End If
