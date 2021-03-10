@@ -49,6 +49,7 @@ Partial Class FrmMain
         Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.XCAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CreatePEMBundleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExportPEMToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -79,7 +80,7 @@ Partial Class FrmMain
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.ExportPEMToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExportCRLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -262,7 +263,7 @@ Partial Class FrmMain
         '
         'XCAToolStripMenuItem
         '
-        Me.XCAToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreatePEMBundleToolStripMenuItem, Me.ExportPEMToolStripMenuItem})
+        Me.XCAToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreatePEMBundleToolStripMenuItem, Me.ExportPEMToolStripMenuItem, Me.ExportCRLToolStripMenuItem})
         Me.XCAToolStripMenuItem.Name = "XCAToolStripMenuItem"
         Me.XCAToolStripMenuItem.Size = New System.Drawing.Size(42, 20)
         Me.XCAToolStripMenuItem.Text = "&XCA"
@@ -272,6 +273,12 @@ Partial Class FrmMain
         Me.CreatePEMBundleToolStripMenuItem.Name = "CreatePEMBundleToolStripMenuItem"
         Me.CreatePEMBundleToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CreatePEMBundleToolStripMenuItem.Text = "Create PEM Bundle"
+        '
+        'ExportPEMToolStripMenuItem
+        '
+        Me.ExportPEMToolStripMenuItem.Name = "ExportPEMToolStripMenuItem"
+        Me.ExportPEMToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExportPEMToolStripMenuItem.Text = "Export PEM"
         '
         'ViewMenu
         '
@@ -489,11 +496,11 @@ Partial Class FrmMain
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(39, 17)
         Me.ToolStripStatusLabel.Text = "Status"
         '
-        'ExportPEMToolStripMenuItem
+        'ExportCRLToolStripMenuItem
         '
-        Me.ExportPEMToolStripMenuItem.Name = "ExportPEMToolStripMenuItem"
-        Me.ExportPEMToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ExportPEMToolStripMenuItem.Text = "Export PEM"
+        Me.ExportCRLToolStripMenuItem.Name = "ExportCRLToolStripMenuItem"
+        Me.ExportCRLToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExportCRLToolStripMenuItem.Text = "Export CRL"
         '
         'FrmMain
         '
@@ -572,4 +579,5 @@ Partial Class FrmMain
     Friend WithEvents XCAToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CreatePEMBundleToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExportPEMToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExportCRLToolStripMenuItem As ToolStripMenuItem
 End Class

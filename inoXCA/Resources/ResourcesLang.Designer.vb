@@ -146,6 +146,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Define CRL-file ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property CmdFileSelect() As String
+            Get
+                Return ResourceManager.GetString("CmdFileSelect", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die License ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property CmdLicense() As String
@@ -178,6 +187,60 @@ Namespace My.Resources
         Friend Shared ReadOnly Property CmdSaveClose() As String
             Get
                 Return ResourceManager.GetString("CmdSaveClose", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Export ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property ExportCRLExport() As String
+            Get
+                Return ResourceManager.GetString("ExportCRLExport", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Name of CA ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property ExportCRLName() As String
+            Get
+                Return ResourceManager.GetString("ExportCRLName", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Number of revoked certs ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property ExportCRLNoRevoked() As String
+            Get
+                Return ResourceManager.GetString("ExportCRLNoRevoked", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Name of export file ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property ExportCRLPath() As String
+            Get
+                Return ResourceManager.GetString("ExportCRLPath", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Export CRL files ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property ExportCRLTitle() As String
+            Get
+                Return ResourceManager.GetString("ExportCRLTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Next Update ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property ExportCRLUpdate() As String
+            Get
+                Return ResourceManager.GetString("ExportCRLUpdate", resourceCulture)
             End Get
         End Property
         
@@ -250,6 +313,42 @@ Namespace My.Resources
         Friend Shared ReadOnly Property ExportXCATitle() As String
             Get
                 Return ResourceManager.GetString("ExportXCATitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die CRL-file (*.crl) ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property FileCRL() As String
+            Get
+                Return ResourceManager.GetString("FileCRL", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die P12-file (*.p12) ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property FileP12() As String
+            Get
+                Return ResourceManager.GetString("FileP12", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die PEM-file (*.pem) ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property FilePEM() As String
+            Get
+                Return ResourceManager.GetString("FilePEM", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die XCA-database (*.xdb) ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property FileXCA() As String
+            Get
+                Return ResourceManager.GetString("FileXCA", resourceCulture)
             End Get
         End Property
         
@@ -448,6 +547,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property MsgMissingCertFolder() As String
             Get
                 Return ResourceManager.GetString("MsgMissingCertFolder", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Missing CRL-file for &apos;{0}&apos;. ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property MsgMissingPath() As String
+            Get
+                Return ResourceManager.GetString("MsgMissingPath", resourceCulture)
             End Get
         End Property
         

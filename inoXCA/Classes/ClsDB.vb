@@ -1,4 +1,5 @@
 ﻿
+Imports System.Globalization
 Imports Microsoft.Data
 Imports Microsoft.Data.Sqlite
 
@@ -12,7 +13,7 @@ Public Class ClsDB
         Public Property ParentId As Object
     End Class
 
-    Public Sub PopulateNodesFromDB(DBPath As String, tvCerts As TreeView)
+    Public Sub PopulateTreeviewNodesFromDB(DBPath As String, tvCerts As TreeView)
         tvCerts.BeginUpdate()
         tvCerts.Nodes.Clear()
         Dim connect As New Sqlite.SqliteConnection()
@@ -97,5 +98,45 @@ Public Class ClsDB
         command.Dispose()
         connect.Close()
         Return key
+    End Function
+
+    Public Sub PopulateDataGridViewFromDB(DBPath As String, dgv As DataGridView)
+        dgv.Rows.Clear()
+
+        Dim connect As New Sqlite.SqliteConnection()
+        Dim command As New SqliteCommand
+        connect.ConnectionString = "Data Source='" & DBPath & "'"
+        connect.Open()
+
+        command = connect.CreateCommand
+
+        command.CommandText = "SELECT * FROM view_crls ORDER BY name, date desc"
+
+        Dim SQLreader As SqliteDataReader = command.ExecuteReader()
+        Dim lastName As String = vbNullString
+        While SQLreader.Read()
+            Dim RowCount As Integer = dgv.RowCount '- 1 ' hier zählst du die vorhanden Eintrräge
+            If lastName <> SQLreader("name") Then
+                dgv.Rows.Add() ' 
+                dgv.BeginEdit(CBool(RowCount))
+                dgv.Rows(RowCount).Cells("id").Value = SQLreader("id")
+                dgv.Rows(RowCount).Cells("CrlName").Value = SQLreader("name")
+                dgv.Rows(RowCount).Cells("NextUpdate").Value = TimeCodeToDate(SQLreader("date"))
+                dgv.Rows(RowCount).Cells("Numbers").Value = SQLreader("num")
+                dgv.Rows(RowCount).Cells("CRL").Value = SQLreader("crl")
+                dgv.Update()
+                dgv.EndEdit()
+                lastName = SQLreader("name")
+            End If
+        End While
+        command.Dispose()
+        connect.Close()
+
+
+    End Sub
+
+    Public Function TimeCodeToDate(timecode As String) As DateTime
+        Dim time As String = timecode.Substring(0, 14)
+        Return DateTime.ParseExact(time, "yyyyMMddHHmmss", CultureInfo.InvariantCulture, DateTimeStyles.None)
     End Function
 End Class

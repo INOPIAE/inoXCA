@@ -288,4 +288,40 @@
   <data name="CmdExportBulk" xml:space="preserve">
     <value>Export checked</value>
   </data>
+  <data name="FilePEM" xml:space="preserve">
+    <value>PEM-file (*.pem)</value>
+  </data>
+  <data name="FileP12" xml:space="preserve">
+    <value>P12-file (*.p12)</value>
+  </data>
+  <data name="FileXCA" xml:space="preserve">
+    <value>XCA-database (*.xdb)</value>
+  </data>
+  <data name="FileCRL" xml:space="preserve">
+    <value>CRL-file (*.crl)</value>
+  </data>
+  <data name="CmdFileSelect" xml:space="preserve">
+    <value>Define CRL-file</value>
+  </data>
+  <data name="ExportCRLTitle" xml:space="preserve">
+    <value>Export CRL files</value>
+  </data>
+  <data name="ExportCRLExport" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="ExportCRLName" xml:space="preserve">
+    <value>Name of CA</value>
+  </data>
+  <data name="ExportCRLUpdate" xml:space="preserve">
+    <value>Next Update</value>
+  </data>
+  <data name="ExportCRLNoRevoked" xml:space="preserve">
+    <value>Number of revoked certs</value>
+  </data>
+  <data name="ExportCRLPath" xml:space="preserve">
+    <value>Name of export file</value>
+  </data>
+  <data name="MsgMissingPath" xml:space="preserve">
+    <value>Missing CRL-file for '{0}'.</value>
+  </data>
 </root>

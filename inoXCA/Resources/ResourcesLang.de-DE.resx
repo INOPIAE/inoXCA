@@ -232,7 +232,7 @@
     <value>2. Wähle PEM Datei, um die Zertifikate in Bundle-Datei zu exportieren.</value>
   </data>
   <data name="CmdExport" xml:space="preserve">
-    <value>Exportiere ausgewähltes</value>
+    <value>Exportiere ausgewählte</value>
   </data>
   <data name="ExportXCATitle" xml:space="preserve">
     <value>Exportieren von XCA in eine Zertifikatsdatei</value>
@@ -287,5 +287,41 @@
   </data>
   <data name="CmdExportBulk" xml:space="preserve">
     <value>Exportiere angeklickte</value>
+  </data>
+  <data name="FilePEM" xml:space="preserve">
+    <value>PEM-Datei (*.pem)</value>
+  </data>
+  <data name="FileP12" xml:space="preserve">
+    <value>P12-Datei (*.p12)</value>
+  </data>
+  <data name="FileXCA" xml:space="preserve">
+    <value>XCA-Datenbank (*.xdb)</value>
+  </data>
+  <data name="FileCRL" xml:space="preserve">
+    <value>CRL-Datei (*.crl)</value>
+  </data>
+  <data name="CmdFileSelect" xml:space="preserve">
+    <value>Definiere CRL-Datei</value>
+  </data>
+  <data name="ExportCRLTitle" xml:space="preserve">
+    <value>Export von CRL-Dateien</value>
+  </data>
+  <data name="ExportCRLExport" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="ExportCRLName" xml:space="preserve">
+    <value>Name der CA</value>
+  </data>
+  <data name="ExportCRLUpdate" xml:space="preserve">
+    <value>Nächstes Update</value>
+  </data>
+  <data name="ExportCRLNoRevoked" xml:space="preserve">
+    <value>Zahl der widerrufenen Zertifikate</value>
+  </data>
+  <data name="ExportCRLPath" xml:space="preserve">
+    <value>Name der Exportdatei</value>
+  </data>
+  <data name="MsgMissingPath" xml:space="preserve">
+    <value>Fehlende CRL-Datei für '{0}'.</value>
   </data>
 </root>

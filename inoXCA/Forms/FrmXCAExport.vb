@@ -27,12 +27,12 @@ Public Class FrmXCAExport
     Private Sub CmdFileXCA_Click(sender As Object, e As EventArgs) Handles CmdFileXCA.Click
         Dim ofd As New OpenFileDialog
         With ofd
-            .Filter = "XCA-File | *.xdb"
+            .Filter = String.Format("{0} | *.xdb", clsLang.rm.getString("FileXCA"))
             .Multiselect = False
             If .ShowDialog = DialogResult.OK Then
                 Me.TxtFileXCA.Text = .FileName
 
-                cDB.PopulateNodesFromDB(Me.TxtFileXCA.Text, TvCerts)
+                cDB.PopulateTreeviewNodesFromDB(Me.TxtFileXCA.Text, TvCerts)
             End If
         End With
     End Sub

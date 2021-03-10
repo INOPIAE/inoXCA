@@ -31,12 +31,12 @@ Public Class FrmXCABundle
     Private Sub CmdFileXCA_Click(sender As Object, e As EventArgs) Handles CmdFileXCA.Click
         Dim ofd As New OpenFileDialog
         With ofd
-            .Filter = "XCA-File | *.xdb"
+            .Filter = String.Format("{0} | *.xdb", clsLang.rm.getString("FileXCA"))
             .Multiselect = False
             If .ShowDialog = DialogResult.OK Then
                 Me.TxtFileXCA.Text = .FileName
                 Dim cDB As New ClsDB
-                cDB.PopulateNodesFromDB(Me.TxtFileXCA.Text, TvCerts)
+                cDB.PopulateTreeviewNodesFromDB(Me.TxtFileXCA.Text, TvCerts)
             End If
         End With
     End Sub
@@ -44,7 +44,7 @@ Public Class FrmXCABundle
     Private Sub CmdFilePEM_Click(sender As Object, e As EventArgs) Handles CmdFilePEM.Click
         Dim sfd As New SaveFileDialog
         With sfd
-            .Filter = "PEM-File | *.pem"
+            .Filter = String.Format("{0} | *.pem", clsLang.rm.getString("FilePEM"))
             If .ShowDialog = DialogResult.OK Then
                 Me.TxtPEM.Text = .FileName
                 CallRecursive(TvCerts, TxtPEM.Text)
